@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis — Access, Governed.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="landing" class="page landing-page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Aegis home" onclick="showLanding(event)">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 5l9 5.2v11.6L16 27l-9-5.2V10.2L16 5z"/>
+            <path d="M16 10.5l4.7 2.7v5.6L16 21.5l-4.7-2.7v-5.6L16 10.5z"/>
+          </svg>
+        </span>
+        <span>
+          <strong>Aegis</strong>
+          <small>ACCESS, GOVERNED.</small>
+        </span>
+      </a>
+      <button class="top-signin" onclick="showLogin()">Sign in</button>
+    </header>
+
+    <section class="hero">
+      <div class="pill">
+        <span class="lock-icon">⌑</span>
+        Permission-based access control
+      </div>
+
+      <h1>Every role. <span>One secure entry.</span></h1>
+      <p>Aegis is the authentication gateway for permission-based applications<br>
+         — ready to route users, roles, and permissions to the right workspace.</p>
+
+      <div class="hero-actions">
+        <button class="btn primary" onclick="showLogin()">Sign in <span>→</span></button>
+        <button class="btn secondary">Continue as guest</button>
+      </div>
+    </section>
+
+    <footer class="landing-footer">
+      <div><span class="shield">♢</span> Session-based authentication · Secure by design</div>
+      <div>© 2026 Aegis</div>
+    </footer>
+  </main>
+
+  <main id="login" class="page login-page hidden">
+    <section class="login-brand-panel">
+      <a class="brand login-brand" href="#" onclick="showLanding(event)">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 5l9 5.2v11.6L16 27l-9-5.2V10.2L16 5z"/>
+            <path d="M16 10.5l4.7 2.7v5.6L16 21.5l-4.7-2.7v-5.6L16 10.5z"/>
+          </svg>
+        </span>
+        <span>
+          <strong>Aegis</strong>
+          <small>ACCESS, GOVERNED.</small>
+        </span>
+      </a>
+
+      <div class="brand-copy">
+        <div class="eyebrow">AUTHENTICATION ENTRY POINT</div>
+        <h2>One entrance. Every<br>permission.</h2>
+        <p>Aegis is the secure gateway for your organization — built to route every user, role, and permission to the right workspace.</p>
+
+        <div class="badges">
+          <span>♢ &nbsp;Role-aware</span>
+          <span>♢ &nbsp;Permission-ready</span>
+          <span>♢ &nbsp;Enterprise-grade</span>
+        </div>
+
+        <div class="pipeline-title">ACCESS PIPELINE · READY FOR AUTHORIZATION</div>
+        <div class="pipeline">
+          <div><i>♙</i><span>User</span></div>
+          <div><i>⌕</i><span>Authentication</span></div>
+          <div><i>◉</i><span>Session</span></div>
+          <div><i>◇</i><span>Role</span></div>
+          <div><i>▣</i><span>Permissions</span></div>
+          <div><i>▦</i><span>Authorized workspace</span></div>
+        </div>
+      </div>
+
+      <div class="copyright">© 2026 Aegis. All rights reserved.</div>
+    </section>
+
+    <section class="login-form-panel">
+      <div class="login-wrapper">
+        <form class="login-card" onsubmit="handleLogin(event)">
+          <div class="eyebrow">SECURE ACCESS</div>
+          <h1>Welcome back</h1>
+          <p>Sign in to continue to your workspace.</p>
+
+          <label for="email">Email or username</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉</span>
+            <input id="email" name="email" type="text" autocomplete="username" placeholder="you@company.com">
+          </div>
+          <small class="error" id="emailError"></small>
+
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">♙</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password">
+            <button type="button" class="eye" onclick="togglePassword()" aria-label="Show password">◉</button>
+          </div>
+          <small class="error" id="passwordError"></small>
+
+          <div class="login-options">
+            <label class="remember"><input id="remember" type="checkbox"><span>Remember me</span></label>
+            <a href="#" onclick="return false;">Forgot password?</a>
+          </div>
+
+          <button id="submitBtn" class="submit-btn" type="submit">Sign In <span>→</span></button>
+          <div id="formMessage" class="form-message" role="alert"></div>
+        </form>
+
+        <div class="security-note"><span>♢</span> Protected by session-based authentication. Never share your password.</div>
+        <div class="demo-note">Demo build — any credentials sign in; use <b>fail@demo.com</b> to preview the error state.</div>
+        <div class="secured">Secured by freebuff.com</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
