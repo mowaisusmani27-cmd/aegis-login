@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXORA — One gateway. Infinite possibilities.">
+<title>Settings — NEXORA</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head><body class="app-page" data-page="settings">
+<div class="app-shell">
+<nav class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="workspace">NEXORA WORKSPACE <span>⌄</span></div>
+  <div class="nav-group">
+    <a data-page="dashboard" href="dashboard.html">⌂ <span>Dashboard</span></a>
+    <a data-page="core" href="core.html">◈ <span>Core</span></a>
+    <a data-page="activity" href="activity.html">◷ <span>Activity</span></a>
+    <a data-page="notifications" href="notifications.html">◉ <span>Notifications</span><b id="navBadge"></b></a>
+    <a data-page="saved" href="saved.html">☆ <span>Saved</span></a>
+    <a data-page="settings" href="settings.html">⚙ <span>Settings</span></a>
+    <a data-page="help" href="help.html">? <span>Help</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <a href="profile.html" class="user-mini"><span class="avatar" data-avatar>NX</span><span><strong data-name>User</strong><small>Online</small></span></a>
+    <button class="logout-btn" data-logout>↪ Logout</button>
+  </div>
+</nav>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+  <div><p class="eyebrow">NEXORA</p><h1 data-title>Workspace</h1></div>
+  <div class="top-actions">
+    <button class="search-trigger" data-search>⌕ <span>Search</span><kbd>Ctrl K</kbd></button>
+    <button class="icon-btn" data-command title="Command center">⌘</button>
+    <a class="icon-btn" href="notifications.html" title="Notifications">◉</a>
+    <a class="avatar" data-avatar href="profile.html">NX</a>
+  </div>
+</header>
+<section class="content">
+<div class="page-heading"><div><span class="pill">PREFERENCES</span><h2>Settings</h2><p>Configure how NEXORA behaves for you.</p></div></div>
+<div class="settings-stack"><section class="panel setting-section"><div class="setting-title"><span class="eyebrow">ACCOUNT</span><h3>Account information</h3></div><div class="settings-grid"><label>Name<input data-setting="name"></label><label>Username<input data-setting="username"></label><label>Email<input data-setting="email" type="email"></label></div></section>
+<section class="panel setting-section"><div class="setting-title"><span class="eyebrow">APPEARANCE</span><h3>Make it yours</h3></div><div class="setting-row"><div><b>Dark mode</b><small>NEXORA's native dark experience.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="dark" checked><span></span></label></div><div class="setting-row"><div><b>Compact mode</b><small>Reduce spacing across the application.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="compact"><span></span></label></div><div class="setting-row"><div><b>Accent color</b><small>Choose the interface highlight.</small></div><select data-setting-select="accent"><option value="violet">Electric violet</option><option value="cyan">Cyan</option><option value="indigo">Indigo</option></select></div></section>
+<section class="panel setting-section"><div class="setting-title"><span class="eyebrow">NOTIFICATIONS</span><h3>Stay informed</h3></div><div class="setting-row"><div><b>Email notifications</b><small>Receive important workspace alerts.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="emailAlerts" checked><span></span></label></div><div class="setting-row"><div><b>Product updates</b><small>Hear about new NEXORA capabilities.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="updates" checked><span></span></label></div><div class="setting-row"><div><b>Activity alerts</b><small>Notify me about workspace changes.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="activityAlerts" checked><span></span></label></div></section>
+<section class="panel setting-section"><div class="setting-title"><span class="eyebrow">APPLICATION</span><h3>Workspace behavior</h3></div><div class="setting-row"><div><b>Default landing page</b><small>Where NEXORA opens after login.</small></div><select data-setting-select="landing"><option value="dashboard">Dashboard</option><option value="core">Core</option></select></div><div class="setting-row"><div><b>Animations</b><small>Enable subtle interface transitions.</small></div><label class="switch"><input type="checkbox" data-setting-toggle="animations" checked><span></span></label></div></section><button class="btn btn-primary" data-save-settings>Save all settings</button></div>
+</section></main></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<div id="command-root"></div>
+<div id="search-root"></div>
+</body></html>

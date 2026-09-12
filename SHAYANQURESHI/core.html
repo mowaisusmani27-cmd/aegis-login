@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXORA — One gateway. Infinite possibilities.">
+<title>NEXORA LAB — NEXORA</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head><body class="app-page" data-page="core">
+<div class="app-shell">
+<nav class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="workspace">NEXORA WORKSPACE <span>⌄</span></div>
+  <div class="nav-group">
+    <a data-page="dashboard" href="dashboard.html">⌂ <span>Dashboard</span></a>
+    <a data-page="core" href="core.html">◈ <span>Core</span></a>
+    <a data-page="activity" href="activity.html">◷ <span>Activity</span></a>
+    <a data-page="notifications" href="notifications.html">◉ <span>Notifications</span><b id="navBadge"></b></a>
+    <a data-page="saved" href="saved.html">☆ <span>Saved</span></a>
+    <a data-page="settings" href="settings.html">⚙ <span>Settings</span></a>
+    <a data-page="help" href="help.html">? <span>Help</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <a href="profile.html" class="user-mini"><span class="avatar" data-avatar>NX</span><span><strong data-name>User</strong><small>Online</small></span></a>
+    <button class="logout-btn" data-logout>↪ Logout</button>
+  </div>
+</nav>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+  <div><p class="eyebrow">NEXORA</p><h1 data-title>Workspace</h1></div>
+  <div class="top-actions">
+    <button class="search-trigger" data-search>⌕ <span>Search</span><kbd>Ctrl K</kbd></button>
+    <button class="icon-btn" data-command title="Command center">⌘</button>
+    <a class="icon-btn" href="notifications.html" title="Notifications">◉</a>
+    <a class="avatar" data-avatar href="profile.html">NX</a>
+  </div>
+</header>
+<section class="content">
+<div class="page-heading"><div><span class="pill">CORE APPLICATION / PLUG-IN</span><h2>NEXORA <em>LAB</em></h2><p>A modular workspace for applications you can launch, extend and replace.</p></div><button class="btn btn-primary" data-create-module>＋ Create module</button></div>
+<div class="core-toolbar"><div class="search-inline">⌕<input id="moduleSearch" placeholder="Search modules..."></div><div class="filter-tabs"><button class="active" data-filter="all">All</button><button data-filter="active">Active</button><button data-filter="favorite">Favorites</button><button data-filter="archived">Archived</button></div></div>
+<div id="moduleGrid" class="module-grid"></div>
+<div class="architecture panel"><div><span class="eyebrow">MODULAR ARCHITECTURE</span><h3>The Core can become anything.</h3><p>NEXORA LAB is isolated from the application shell. Replace this module with an AI assistant, CRM, finance manager, education platform, analytics system or any custom application without rebuilding authentication, navigation or user infrastructure.</p></div><div class="arch-flow"><span>NEXORA SHELL</span><b>↓</b><span>CORE PLUGIN</span><b>↓</b><span>YOUR APP</span></div></div>
+</section></main></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<div id="command-root"></div>
+<div id="search-root"></div>
+</body></html>

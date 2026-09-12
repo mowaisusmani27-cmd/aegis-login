@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXORA — One gateway. Infinite possibilities.">
+<title>Dashboard — NEXORA</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head><body class="app-page" data-page="dashboard">
+<div class="app-shell">
+<nav class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="workspace">NEXORA WORKSPACE <span>⌄</span></div>
+  <div class="nav-group">
+    <a data-page="dashboard" href="dashboard.html">⌂ <span>Dashboard</span></a>
+    <a data-page="core" href="core.html">◈ <span>Core</span></a>
+    <a data-page="activity" href="activity.html">◷ <span>Activity</span></a>
+    <a data-page="notifications" href="notifications.html">◉ <span>Notifications</span><b id="navBadge"></b></a>
+    <a data-page="saved" href="saved.html">☆ <span>Saved</span></a>
+    <a data-page="settings" href="settings.html">⚙ <span>Settings</span></a>
+    <a data-page="help" href="help.html">? <span>Help</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <a href="profile.html" class="user-mini"><span class="avatar" data-avatar>NX</span><span><strong data-name>User</strong><small>Online</small></span></a>
+    <button class="logout-btn" data-logout>↪ Logout</button>
+  </div>
+</nav>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+  <div><p class="eyebrow">NEXORA</p><h1 data-title>Workspace</h1></div>
+  <div class="top-actions">
+    <button class="search-trigger" data-search>⌕ <span>Search</span><kbd>Ctrl K</kbd></button>
+    <button class="icon-btn" data-command title="Command center">⌘</button>
+    <a class="icon-btn" href="notifications.html" title="Notifications">◉</a>
+    <a class="avatar" data-avatar href="profile.html">NX</a>
+  </div>
+</header>
+<section class="content">
+<div class="page-heading"><div><span class="pill">● Workspace online</span><h2>Good morning, <span data-first-name>there</span>.</h2><p>Your workspace is ready. Here's what is happening across NEXORA.</p></div><a class="btn btn-primary" href="core.html">Open Core →</a></div>
+<div class="stats-grid"><article class="stat-card"><span>Usage score</span><strong>92<small>/100</small></strong><div class="progress"><i style="width:92%"></i></div><em>↑ 8% this week</em></article><article class="stat-card"><span>Active projects</span><strong>08</strong><em>Across 4 categories</em></article><article class="stat-card"><span>Completed tasks</span><strong>24</strong><em>↑ 12% this month</em></article><article class="stat-card"><span>Current streak</span><strong>14<small> days</small></strong><em>Keep the momentum</em></article></div>
+<div class="dashboard-grid"><article class="panel"><div class="panel-head"><div><span class="eyebrow">RECENT ACTIVITY</span><h3>What's happening</h3></div><a href="activity.html">View all →</a></div><div id="dashboardActivity" class="timeline compact"></div></article>
+<article class="panel"><div class="panel-head"><div><span class="eyebrow">QUICK ACTIONS</span><h3>Jump right in</h3></div></div><div class="quick-actions"><a href="core.html" class="quick">＋<b>Create module</b><small>Start something new</small></a><a href="profile.html" class="quick">◎<b>Update profile</b><small>Keep your identity fresh</small></a><a href="settings.html" class="quick">⚙<b>Preferences</b><small>Shape your workspace</small></a></div></article></div>
+<div class="dashboard-grid"><article class="panel"><div class="panel-head"><div><span class="eyebrow">SYSTEM STATUS</span><h3>Everything is operational</h3></div><span class="status-dot">● All systems</span></div><div class="system-list"><div><span>Core services</span><b>Operational</b></div><div><span>Workspace storage</span><b>Healthy</b></div><div><span>Local session</span><b>Active</b></div></div></article><article class="panel"><div class="panel-head"><div><span class="eyebrow">LATEST</span><h3>Notifications</h3></div><a href="notifications.html">Open →</a></div><div id="dashboardNotifications"></div></article></div>
+</section></main></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<div id="command-root"></div>
+<div id="search-root"></div>
+</body></html>

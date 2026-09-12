@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXORA — One gateway. Infinite possibilities.">
+<title>Profile — NEXORA</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head><body class="app-page" data-page="profile">
+<div class="app-shell">
+<nav class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="workspace">NEXORA WORKSPACE <span>⌄</span></div>
+  <div class="nav-group">
+    <a data-page="dashboard" href="dashboard.html">⌂ <span>Dashboard</span></a>
+    <a data-page="core" href="core.html">◈ <span>Core</span></a>
+    <a data-page="activity" href="activity.html">◷ <span>Activity</span></a>
+    <a data-page="notifications" href="notifications.html">◉ <span>Notifications</span><b id="navBadge"></b></a>
+    <a data-page="saved" href="saved.html">☆ <span>Saved</span></a>
+    <a data-page="settings" href="settings.html">⚙ <span>Settings</span></a>
+    <a data-page="help" href="help.html">? <span>Help</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <a href="profile.html" class="user-mini"><span class="avatar" data-avatar>NX</span><span><strong data-name>User</strong><small>Online</small></span></a>
+    <button class="logout-btn" data-logout>↪ Logout</button>
+  </div>
+</nav>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+  <div><p class="eyebrow">NEXORA</p><h1 data-title>Workspace</h1></div>
+  <div class="top-actions">
+    <button class="search-trigger" data-search>⌕ <span>Search</span><kbd>Ctrl K</kbd></button>
+    <button class="icon-btn" data-command title="Command center">⌘</button>
+    <a class="icon-btn" href="notifications.html" title="Notifications">◉</a>
+    <a class="avatar" data-avatar href="profile.html">NX</a>
+  </div>
+</header>
+<section class="content">
+<div class="page-heading"><div><span class="pill">ACCOUNT</span><h2>Your profile</h2><p>Manage the identity shown across your NEXORA workspace.</p></div></div>
+<div class="profile-grid"><article class="panel profile-card"><div class="profile-avatar avatar-xl" data-avatar>NX</div><h3 data-profile-name>User</h3><p class="muted">@<span data-profile-username>username</span></p><span class="status-dot">● Active account</span><div class="profile-stats"><div><b id="profileModules">0</b><small>Modules</small></div><div><b>24</b><small>Tasks</small></div><div><b>14</b><small>Day streak</small></div></div></article>
+<article class="panel"><div class="panel-head"><h3>Profile details</h3></div><form id="profileForm" class="settings-form"><label>Full name<input name="name" data-profile-input="name" required></label><label>Username<input name="username" data-profile-input="username" required></label><label>Email<input name="email" data-profile-input="email" type="email" required></label><label>Bio<textarea name="bio" data-profile-input="bio" rows="4" placeholder="Tell your workspace a little about you..."></textarea></label><button class="btn btn-primary" type="submit">Save profile</button></form></article></div>
+</section></main></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<div id="command-root"></div>
+<div id="search-root"></div>
+</body></html>

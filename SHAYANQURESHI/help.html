@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NEXORA — One gateway. Infinite possibilities.">
+<title>Command Center — NEXORA</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head><body class="app-page" data-page="help">
+<div class="app-shell">
+<nav class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">N</span><span>NEXORA</span></a>
+  <div class="workspace">NEXORA WORKSPACE <span>⌄</span></div>
+  <div class="nav-group">
+    <a data-page="dashboard" href="dashboard.html">⌂ <span>Dashboard</span></a>
+    <a data-page="core" href="core.html">◈ <span>Core</span></a>
+    <a data-page="activity" href="activity.html">◷ <span>Activity</span></a>
+    <a data-page="notifications" href="notifications.html">◉ <span>Notifications</span><b id="navBadge"></b></a>
+    <a data-page="saved" href="saved.html">☆ <span>Saved</span></a>
+    <a data-page="settings" href="settings.html">⚙ <span>Settings</span></a>
+    <a data-page="help" href="help.html">? <span>Help</span></a>
+  </div>
+  <div class="sidebar-bottom">
+    <a href="profile.html" class="user-mini"><span class="avatar" data-avatar>NX</span><span><strong data-name>User</strong><small>Online</small></span></a>
+    <button class="logout-btn" data-logout>↪ Logout</button>
+  </div>
+</nav>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+  <div><p class="eyebrow">NEXORA</p><h1 data-title>Workspace</h1></div>
+  <div class="top-actions">
+    <button class="search-trigger" data-search>⌕ <span>Search</span><kbd>Ctrl K</kbd></button>
+    <button class="icon-btn" data-command title="Command center">⌘</button>
+    <a class="icon-btn" href="notifications.html" title="Notifications">◉</a>
+    <a class="avatar" data-avatar href="profile.html">NX</a>
+  </div>
+</header>
+<section class="content">
+<div class="page-heading"><div><span class="pill">COMMAND CENTER</span><h2>How can we help?</h2><p>Everything you need to move around NEXORA quickly.</p></div><button class="btn btn-primary" data-command>Open command palette ⌘K</button></div>
+<div class="help-grid"><article class="panel"><span class="help-icon">⌘</span><h3>Command palette</h3><p>Press <kbd>Ctrl K</kbd> or <kbd>⌘ K</kbd> from anywhere to navigate, create modules, toggle settings or sign out.</p></article><article class="panel"><span class="help-icon">⌕</span><h3>Global search</h3><p>Search modules, activities and pages instantly from the top bar.</p></article><article class="panel"><span class="help-icon">◈</span><h3>Core architecture</h3><p>NEXORA LAB is a replaceable plug-in. The shell owns identity and infrastructure; the Core owns the application.</p></article><article class="panel"><span class="help-icon">✓</span><h3>Demo limitations</h3><p>This MVP stores data locally in your browser. Production authentication should be replaced by a secure backend.</p></article></div>
+<div class="panel shortcuts"><div class="panel-head"><h3>Keyboard shortcuts</h3></div><div><span>Command center</span><kbd>Ctrl / ⌘ K</kbd></div><div><span>Close modal</span><kbd>Esc</kbd></div><div><span>Navigate results</span><kbd>↑ ↓</kbd></div><div><span>Open selected</span><kbd>Enter</kbd></div></div>
+</section></main></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<div id="command-root"></div>
+<div id="search-root"></div>
+</body></html>
